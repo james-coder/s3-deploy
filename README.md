@@ -1,5 +1,6 @@
 # AWS S3 Deploy GitHub Action
 
+
 ### Easily deploy a static website to AWS S3 and invalidate CloudFront distribution
 
 This action is based on the work done by import-io on [s3-deploy](https://github.com/import-io/s3-deploy#readme).
