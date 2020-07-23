@@ -10,7 +10,8 @@ let deploy = function (folder, bucket, distId) {
                         --distId ${distId} \
                         --etag \
                         --gzip xml,html,htm,js,css,ttf,otf,svg,txt \
-                        --invalidate / `;
+                        --invalidate / \
+                        --cacheControl no-cache `;
 
       const cwd = path.resolve(folder);
       exec.exec(command, [], { cwd }).then(resolve).catch(reject);
