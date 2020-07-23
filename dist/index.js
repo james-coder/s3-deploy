@@ -1011,10 +1011,9 @@ let deploy = function (folder, bucket, distId) {
                         --bucket ${bucket} \
                         --cwd . \
                         --distId ${distId} \
-                        --etag \
                         --gzip xml,html,htm,js,css,ttf,otf,svg,txt \
                         --invalidate / \
-                        --noCache `;
+                        --cacheControl 'no-cache' `;
 
       const cwd = path.resolve(folder);
       exec.exec(command, [], { cwd }).then(resolve).catch(reject);
